@@ -6,7 +6,8 @@ echo "lg2: a-Shell - git: ish"
 lg2 help | tr '\n' ' '
 
 # available commands {{{
-# lg2 reset main
+
+printf "Display user configs:\n%s\nAdd global configs to .gitconfig file:\n%s\n" "$(git config user.name)" "git config user.name 'Donald Trump'"
 
 # Logging data for GitHub {{{
 
