@@ -1,0 +1,13 @@
+Finish Todo
+Find place to store todo project and bookmarks xdg_data_home
+Finish adding bookmarks and cheats already stored
+kerping bash version of todo while testing jq and csv conversions to work with both
+Testing radio
+Testing radio
+Set up github cheatsheet, library
+Make a Journal to compliment github logs
+26/1/11 21:47
+[ ]	make a journal for summaries
+[ ]26/1/11 22:11	commit everyday
+[ ] 26/1/11 23:00	added xdg_data_home/todo.txt; might make this a journal
+[ ] 26/1/12 14:36	history files for jq uniqued and unified for adding to jq as a list
