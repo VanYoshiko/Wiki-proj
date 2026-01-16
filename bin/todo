@@ -25,6 +25,7 @@ add_task() {
 
 function list_tasks {
 	if [ -s "$TODO_FILE" ]; then
+		echo "$?"
 		echo "Your TODO list:"
 		cat "$TODO_FILE"
 	else 
@@ -41,11 +42,23 @@ remove_task() {
 		echo "No tasks found"
 		exit 1
 	fi
-	escaped_task=$(printf %s\n "$1" | sed 's/[]\/$*,^|[]/\\&g')
-
-	sed -i "/^${escaped_task}$/d" "$TODO_FILE"
-
+	sed -i "/${1}/s/.*\(${1}\).*//g" "$TODO_FILE"
 	echo "Removed task: $1"
+}
+
+# Mark task as completed!
+function mark_task() {
+	if [ -z "$1" ]; then
+		echo "Error: Task to be removed cannot be empty"
+		exit 1 
+	fi
+	if [ ! -f $TODO_FILE ]; then
+		echo "No file or dir..."
+	else
+# Search for str and mark w/x		
+		sed -i "/${1}/s/\[ \]/\[x\]/" "$TODO_FILE"
+		echo "Marked #$1 as done"
+	fi
 }
 
 case "$1" in
@@ -57,6 +70,9 @@ case "$1" in
 		;;
 	remove)
 		remove_task "$2"
+		;;
+	mark)
+		mark_task "$2"
 		;;
 	*)
 		show_help

@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Making cheat sheet commands
+
+menu="$XDG_DATA_HOME/menu_shortcut.json"
+cheat="$XDG_DATA_HOME/cheatsheet.json"
+cheat_tmp="TMPDIR/cheat.tmp"
+
+function add_cheat {
+	# jq '.' $XDG_DATA_HOME/menu_shortcut.json
+	jq 'keys' $menu
+	jq '."$1" += [{"usage": "$2", "command": "$3"}]' $cheat > $cheat_tmp && mv $cheat_tmp $cheat
+}
+
+remove_cheat() {
+	echo "Removing cheat"
+}
+
+function list_cheats {
+	echo "List of cheats:"
+	jq 'values' $cheat
+
+}
+list_cheats
+
+
+case "$1" in
+	add)
+		add_task "$2"
+		;;
+	list)
+		list_cheats
+		;;
+	remove)
+		remove_task "$2"
+		;;
+	*)
+		show_help
+		;;
+esac
+
