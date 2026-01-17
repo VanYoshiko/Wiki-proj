@@ -1,6 +1,0 @@
-{
-  "Linux": ["mkdir", "touch", "mount"],
-  "Vim": ["insert_mode", "visual_mode", "normal_mode"],
-  "Bash": ["variables", "loops", "functions"],
-  "shortcuts": ["pickFolder", "runScript"]
-}
