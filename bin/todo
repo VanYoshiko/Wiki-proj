@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# export message="TheDefualtMessage"
+source /mnt/sharedlocal/home/bin/ish_logger "[INFO] todo edit"
+
 clear 
 echo "======================================"
 echo "		-> TODO <-     "
