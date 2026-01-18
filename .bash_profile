@@ -1,0 +1,10 @@
+export PS1='\[\e[1;30;47m\][\W]\[\e[0m\]\[\e[1;31m\]$\[\e[0m\] '
+export PATH="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/mnt/sharedlocal/home/bin"
+alias ga='git add'
+alias gaa='git add .'
+alias gl='git log --oneline'
+alias gc='git commit -m'
+alias gs='git status'
+man() {
+lynx https://www.man7.org/linux/man-pages/
+}
