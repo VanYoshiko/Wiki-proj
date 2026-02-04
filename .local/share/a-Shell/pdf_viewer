@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Open PDF help files using internalbrowser for A-shell !
+clear
+# Show numbered pdf_dir
+echo "===== PDF LIST ====="
+pdf_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Images/pdf_dir"
+# echo "[INFO] This is directory files to be viewed:$pdf_dir" 
+pdfs=$(ls "$pdf_dir")
+# echo "[INFO] This is files: $pdfs"
+pdf_list=$(echo "$pdfs" | awk '{print NR "\t" $0}')
+echo "$pdf_list"
+# Get total files to choose from 
+count=$(echo "$pdf_list" | wc -l)
+
+echo "===== PDF LIST ====="
+
+# Select the number of pdf
+echo "Enter number from 1 to $count:"
+read num
+selected=$(echo "$pdf_list" | grep "^$num" ||  echo "[ERROR] Empty value")
+file=$(echo "$selected" | awk -F '\t' '{print $2}')
+ 
+# Check if selection is valid
+if [ $num -ge 1 ] && [ $num -le $count ]; then 
+	view "$pdf_dir/$file" || echo "[ERROR] Not able to view"
+else
+	echo "[ERROR] Invalid!" >&2
+fi

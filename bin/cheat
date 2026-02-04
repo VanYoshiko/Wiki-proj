@@ -5,6 +5,7 @@
 cheat="$XDG_DATA_HOME/cheatsheet.json"
 cheat_tmp="TMPDIR/cheat.tmp"
 
+
 function add_cheat {
 	# jq '.' $XDG_DATA_HOME/menu_shortcut.json
 	jq 'keys' $menu

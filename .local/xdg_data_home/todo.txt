@@ -1,21 +1,24 @@
 [ ] Finish Todo
 [ ] Find place to store todo project and bookmarks xdg_data_home
 [ ] Finish adding bookmarks and cheats already stored
-[ ] kerping bash version of todo while testing jq and csv conversions to work with both
-[ ] Testing radio
-[ ] Set up github cheatsheet, library
-[ ] Make a Journal to compliment github logs
 [ ] 26/1/11 21:47	make a journal for summaries
 [x] 26/1/11 22:11	commit everyday
-[ ] 26/1/11 23:00	added xdg_data_home/todo.txt; might make this a journal
 [ ] 26/1/12 14:36	history files for jq uniqued and unified for adding to jq as a list
 [ ] 26/1/12 14:54	Need to crontab  and  files
-[ ] 26/1/12 14:56	Need to crontab XDG_DATA_HOME and TMPDIR files/ Note: variables in text seem to try and expand!
-[ ] 26/1/12 19:38	Created xdg_dir!
-
-[ ] 26/1/13 01:05	sync  to.local backups
-[x] 26/1/13 01:51	add case statement to /cheat
+[ ] 26/1/13 01:05	sync  to.local backups ish
+[x] 26/1/13 01:51	add case statement to cheat
 [ ] 26/1/16 04:31	Need to move files to main branch from develop
-[ ] 26/1/16 17:30	Use python for logging
-
 [ ] 26/1/16 23:39	Hackpen video ti auto update
+[ ] 26/1/19 03:25	Setting up sql databases to accounts and project managements
+[ ] 26/1/20 04:28	Meed a dictionary for sql expenses data. Build a executable for adding data to .db terminal ui! 
+[ ] 26/1/22 14:38	ssh keygen and permissions; use awk for csv files with a-shell; cheats and booksmarks are different logic
+[ ] 26/1/22 14:39	ssh keygen and permissions; use awk for csv files with a-shell; cheats and booksmarks are different logic
+[ ] 26/1/30 13:30	Export to csv file for table viewings
+[ ] 26/1/31 00:48	create popup window for vin
+[ ] 26/1/31 14:31	what is batch process
+[ ] 26/2/1 18:41	 find a dictionary for bookmakrs shortcuts ios
+[ ] 26/2/1 18:42	dig command to network testing
+[ ] 26/2/2 12:14	fiinish html parsers for terminal and vim
+[ ] 26/2/2 12:17	Make scripts to move all files of the same kind to its directory
+[x] 26/2/2 12:26	Create all symlinks to from local to sandbox
+

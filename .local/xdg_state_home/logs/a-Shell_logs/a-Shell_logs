@@ -1,0 +1,48 @@
+hello world
+
+[2026-01-29 23:34] [INFO] a-Shell_logger - test
+[2026-01-30 00:30] [] a-Shell_logger - Test error
+[2026-01-30 00:31] [] a-Shell_logger - Test error
+[2026-01-30 00:31] [] a-Shell_logger - Test error
+[2026-01-30 00:50] [] a-Shell_logger - Test DEBUG
+[2026-01-30 00:51] [] a-Shell_logger - Test error
+[2026-01-30 00:52] [] a-Shell_logger - test
+[2026-01-30 01:00] [] a-Shell_logger - Test error
+[2026-01-30 01:04] [ERROR] a-Shell_logger - Test error
+[2026-01-30 01:04] [DEBUG] a-Shell_logger - Test DEBUG
+[2026-01-30 01:05] [INFO] a-Shell_logger - test
+[+ date -u +%Y-%m-%d %H:%M
+2026-01-30 02:13] [INFO] + basename ./a-Shell_logger
+a-Shell_logger - test
+[+ date -u +%Y-%m-%d %H:%M
+2026-01-30 02:47] [INFO] + basename ./.local/xdg_config_home/genkey
+genkey - <- ran script
+[+ date -u +%Y-%m-%d %H:%M
+2026-01-30 02:59] [INFO] + basename $0
+$0 - Logged script
+[+ date -u +%Y-%m-%d %H:%M
+2026-01-30 03:08] [INFO] + basename ./.local/xdg_config_home/genkey
+genkey - Logged script
+[+ date -u +%Y-%m-%d %H:%M
+2026-01-30 03:10] [INFO] + basename ./.local/xdg_config_home/genkey
+genkey - Logged script
+[2026-01-30 03:10] [INFO] genkey - Logged script
+[2026-02-02 14:30] [INFO] symlinkA.sh - Logged script
+[2026-02-02 14:33] [INFO] symlinkA.sh - Logged script
+[2026-02-02 14:33] [INFO] symlinkA.sh - Logged script
+[2026-02-02 14:34] [INFO] symlinkA.sh - Logged script
+[2026-02-02 14:35] [INFO] symlinkA.sh - Logged script
+[2026-02-02 14:40] [INFO] symlinkA.sh - Logged script
+[2026-02-02 15:43] [INFO] symlinkA.sh - Logged script
+[2026-02-02 15:51] [INFO] symlinkA.sh - Logged script
+[2026-02-02 15:54] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:00] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:05] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:06] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:32] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:35] [INFO] symlinkA.sh - Logged script
+[2026-02-02 16:37] [INFO] symlinkA.sh - Logged script
+[2026-02-02 17:01] [INFO] symlinkA.sh - Logged script
+[2026-02-02 17:07] [INFO] symlinkA.sh - Logged script
+[2026-02-02 17:56] [INFO] symlinkA.sh - Logged script
+[2026-02-02 17:57] [INFO] symlinkA.sh - Logged script

@@ -1,35 +1,39 @@
 #!/bin/sh
 
-# export message="TheDefualtMessage"
-source /mnt/sharedlocal/home/bin/ish_logger "[INFO] todo edit"
 
 clear 
-echo "======================================"
-echo "		-> TODO <-     "
+logger=".local/xdg_config_home/ish_logger"
 TODO_FILE="/mnt/sharedlocal/home/.local/xdg_data_home/todo.txt"
+
+asci_colors="/mnt/sharedlocal/home/.local/xdg_state_home/terminal_graphics/.asci_colors"
 date="$(date '+%y/%-m/%-d %H:%M')"
+source $logger "editing todo"
+source $asci_colors
+echo -e "${YELLOW}======================================${RESET}"
+center 'TODO'
 
 function show_help {
 	echo "usage: todo [command] [task]"
 	echo "Commands:"
 	echo "	add [task] 		add task"
 	echo "	list				list task"
+	echo "	mark [task] 	mark task"
 	echo "	remove [task] 	remove task"
 }
 
 add_task() {
 	if [ -z "$1" ]; then
-		echo "Task cannot be empty"
+		echo -e "${RED}Task cannot be empty${RESET}"
 		exit 1
 	fi
-	printf "[ ] %s\t$1\n" "$date" >> "$TODO_FILE"
+	printf "[ ] %s\t$1\n" "$date" >> $TODO_FILE
 	echo "Added task: $date $1"
 }
 
 function list_tasks {
 	if [ -s "$TODO_FILE" ]; then
 		echo "$?"
-		echo "Your TODO list:"
+		echo "Your TODO list: $(grep "^\[\s\]" .local/xdg_data_home/todo.txt | wc -l)"	
 		cat "$TODO_FILE"
 	else 
 		echo "No TODO's found"
@@ -38,7 +42,7 @@ function list_tasks {
 
 remove_task() {
 	if [ -z "$1" ]; then
-		echo "Error: Task to be removed cannot be empty"
+		echo "${RED}Error: Task to be removed cannot be empty${RESET}"
 		exit 1 
 	fi
 	if [ ! -f "$TODO_FILE" ]; then
@@ -58,7 +62,7 @@ function mark_task() {
 	if [ ! -f $TODO_FILE ]; then
 		echo "No file or dir..."
 	else
-# Search for str and mark w/x		
+		# Search for str and mark w/x		
 		sed -i "/${1}/s/\[ \]/\[x\]/" "$TODO_FILE"
 		echo "Marked #$1 as done"
 	fi
@@ -82,4 +86,4 @@ case "$1" in
 		;;
 esac
 
-echo "======================================"
+echo -e "${YELLOW}======================================${RESET}"
