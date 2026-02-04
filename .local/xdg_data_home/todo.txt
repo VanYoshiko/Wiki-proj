@@ -22,3 +22,5 @@
 [ ] 26/2/2 12:17	Make scripts to move all files of the same kind to its directory
 [x] 26/2/2 12:26	Create all symlinks to from local to sandbox
 
+[ ] 26/2/4 00:44	Merge to main and continue single file commits
+[ ] 26/2/4 01:01	Merge to main and continue single file commits
