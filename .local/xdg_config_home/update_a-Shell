@@ -1,0 +1,34 @@
+#!/bin/sh
+
+clear
+printf "%s\t\t%s\n" "🟢🟡🔴" "SYSTEM UPDATES"
+home_dir="/mnt/sharedlocal/home"
+logger="$home_dir/.local/xdg_config_home/ish_logger"
+log_file="/var/log/messages"
+. "$logger" "Package manager" "INFO"
+
+set -- "git" "sqlite3" "php"
+echo "All items: $@"
+echo "Item count: $#"
+
+system_update() {
+	apk update > /dev/null && apk upgrade > /dev/null && echo "[INFO] System upgraded and updated"
+}
+
+package_update() {
+	apk update $item > /dev/null && echo "[INFO] Updated: $item" || echo  "Up to date: $item"
+}
+
+package_install() {
+	apk add "$item" > /dev/null && echo "[INFO] Installed: $item" || echo "Already installed: $item"
+}
+
+system_update
+for item in "$@"; do
+	echo "Packages - $item:"
+	if [ ! $(which $item) ]; then
+		package_install 
+	else
+		package_update
+	fi
+done

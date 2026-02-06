@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Usage: Create ssh-keys with permissions; Create symlinks from local to sandbox"
+home_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home"
+ssh_bak="$home_dir/.ssh"
+ssh_dir="$HOME/Documents/.ssh"
+pri_key="$ssh_bak/id_ed25519"
+pub_key="$ssh_bak/id_ed25519.pub"
+logger="$home_dir/a-Shell_logger"
+log_file="$home_dir/.local/xdg_state_home/logs/a-Shell_logs/a-Shell_logs"
+. "$logger" "Creating new ssh key" "INFO" 
+create_keygen() {
+		# mkdir -p "$ssh_dir" && echo "[INFO] made directory ssh_dir" || echo "[INFO] Did not make ssh_dir"
+		# mkdir -p "$ssh_bak" && echo "[INFO] made directory ssh_bak" || echo "[INFO] Did not make ssh_bak"
+		# ssh-keygen -t ed25519 -f "$pri_key" -N "" -C "khorihenry@hotmail.com"  
+			# 	echo "[INFO] Installing openssh_client..."
+				echo "[INFO] 🔑 Add this key to https://github.com/settings/keys"
+					cat "$pub_key"
+}
+			
+# Add permissions to keys
+# permissions() {
+	# chmod 600 "$pri_key" >/dev/null && echo "[INFO] Set permission for pri_key"
+	# chmod 644 "$pub_key" >/dev/null && echo "[INFO] Set permission for pub_key"
+	# chmod 600 "$ssh_bak"/config >/dev/null && echo "[INFO] Set permission for ssh_bak"
+	# chmod 700 "$ssh_bak" >/dev/null && echo "[INFO] Set permission for ssh_bak"
+# }
+
+# symlink_keys() {
+# local all_keys="$("$ssh_bak"/*)"
+# # Create soft links to sandbox
+# for key in "$all_keys"; do
+# # ln -s "$key" "$ssh_dir" 
+# echo "[INFO] Symlinked $key to sandbox"
+# done
+# }
+
+echo "$lINENO - [INFO] Main logic"
+create_keygen
+# permissions
+# symlink_keys
+# 
