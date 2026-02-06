@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Open MANPAGES help files using internalbrowser for A-shell !
+clear
+# Show numbered pdf_dir
+echo "===== MANPAGES LIST ====="
+manpages_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Docs/html_dir/manpages"
+# echo "[INFO] This is directory files to be viewed:$manpages_dir" 
+page=$(ls "$manpages_dir")
+# echo "[INFO] This is files: $page"
+manpages=$(echo "$page" | awk '{print NR "\t" $0}')
+echo "$manpages"
+# Get total files to choose from 
+count=$(echo "$manpages" | wc -l)
+
+echo "===== MANPAGES LIST ====="
+
+# Select the number of pdf
+echo "Enter number from 1 to $count:"
+read num
+selected=$(echo "$manpages" | grep "^$num" ||  echo "[ERROR] Empty value")
+file=$(echo "$selected" | awk -F '\t' '{print $2}')
+ 
+# Check if selection is valid
+if [ $num -ge 1 ] && [ $num -le $count ]; then 
+		view "$manpages_dir/$file" || echo "[ERROR] Not able to view"
+	else
+			echo "[ERROR] Invalid!" >&2
+fi
+
