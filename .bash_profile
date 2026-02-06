@@ -5,6 +5,6 @@ alias gaa='git add .'
 alias gl='git log --oneline'
 alias gc='git commit -m'
 alias gs='git status'
-man() {
-lynx https://www.man7.org/linux/man-pages/
-}
+alias la='ls -a'
+alias ll='ls -ahl'
+alias lt='ls -tahl'
