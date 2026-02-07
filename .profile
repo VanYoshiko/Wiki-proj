@@ -1,4 +1,4 @@
-# export PATH="/private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/sharedlocal/home/.local/bin:$PATH"
+export PATH="/private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/sharedlocal/home/.local/bin:$PATH"
 export PS1='\[\e[1;30;47m\][\W]\[\e[0m\]\[\e[1;31m\]\$\[\e[0m\] '
 
 # Alias{{{

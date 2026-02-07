@@ -4,7 +4,7 @@
 clear
 # Show numbered pdf_dir
 echo "===== PDF LIST ====="
-pdf_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Images/pdf_dir"
+pdf_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Docs/pdf_dir"
 # echo "[INFO] This is directory files to be viewed:$pdf_dir" 
 pdfs=$(ls "$pdf_dir")
 # echo "[INFO] This is files: $pdfs"
