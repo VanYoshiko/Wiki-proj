@@ -24,3 +24,6 @@
 
 [ ] 26/2/4 00:44	Merge to main and continue single file commits
 [ ] 26/2/4 01:01	Merge to main and continue single file commits
+[ ] 26/2/5 02:51	finish vim filr go updates and setup for a-shell
+[ ] 26/2/6 13:40	Offline Documenttios: Sqlite3, Posix, linux, lua, Bash, git, manpages
+[ ] 26/2/7 13:54	Make sed file to parse history files

@@ -1,0 +1,55 @@
+{
+  "Linux": [
+    "mkdir",
+    "touch",
+    "mount",
+    "awk",
+    "sed",
+    "jq",
+    "ssh",
+    "find",
+    "printf"
+  ],
+  "Vim": [
+    "insert_mode",
+    "visual_mode",
+    "normal_mode"
+  ],
+  "Bash": [
+    "variables",
+    "loops",
+    "functions"
+  ],
+  "shortcuts": [
+    "pickFolder",
+    "runScript"
+  ]
+}
+{
+  "Linux": [
+    "mkdir",
+    "touch",
+    "mount"
+  ],
+  "Vim": [
+    "insert_mode",
+    "visual_mode",
+    "normal_mode"
+  ],
+  "Bash": [
+    "variables",
+    "loops",
+    "functions"
+  ],
+  "shortcuts": [
+    "pickFolder",
+    "runScript"
+  ],
+  "functions": [
+    {
+      "notes": "vim",
+      "Url": "https://youtube.com/watch?v=pyV3SEIWsKQ&si=rAalEsisr1etCjWo",
+      "date": "9 Jan 2026 at 2:39 PM"
+    }
+  ]
+}
