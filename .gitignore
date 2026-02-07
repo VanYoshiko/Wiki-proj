@@ -7,3 +7,4 @@ Courses_online.git
 .local/xdg_data_home/
 *.pdf
 /.ssh/
+*.vim

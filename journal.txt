@@ -5,3 +5,6 @@ Test with date and time
 Still date and time
 07:32
 Okay just time 
+13:07
+'declare -A'    To make an associative array in bash.
+'{arr[@]}'  -       To iterate thru an array 
