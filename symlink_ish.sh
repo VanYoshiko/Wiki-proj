@@ -1,29 +1,38 @@
 #!/bin/sh
 
 # Access files by symlinking to sandbox
+clear
 
-home_ish="/mnt/sharedlocal/home"
-home_a_Shell="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home"
-# ish or a_Shell switch
-if [ -d $home_a_Shell ]; then
-	home_dir="$home_a_Shell" 
-	echo "Symlinking a-Shell files"
-else
-	echo "Symlinking ish files"
-	home_dir="$home_ish"
-fi
-logger="$home_dir/.local/xdg_config_home/a-Shell_logger"
-log_file="$home_dir/.local/xdg_state_home/logs/a-Shell_logs/a-Shell_logs"
+if [ -d "/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home" ] [ -d /mnt/shared/home" ] 
+echo "$home_dir"
+asci_colors="$home_dir/.local/xdg_state_home/terminal_graphics/.asci_colors"
+source $asci_colors
 
-. "$logger" "Symlink manager" "INFO"
-
-symlink_dotfiles() {
-# ln -s "$home_dir/.vim" "$HOME/Documents" && echo "[INFO] Symlinked .vim"
-# ln -s "$home_dir/.vimrc" "$HOME/Documents" && echo "[INFO] Symlinked .vimrc"
-ln -s "$home_dir/.profile" "$HOME/Documents" && echo "[INFO] Symlinked .profile"
-ln -s "$home_dir/.ssh" "$HOME/Documents" && echo "[INFO] Symlinked .ssh"
+symlink_ishfiles() {
+	ln -s "$home_dir/.bash_profile" "$HOME" && echo "[INFO] Symlinked .profile"
+	ln -s "$home_dir/.ssh" "$HOME" && echo "[INFO] Symlinked .ssh"
 }
 
+symlink_aShell() {
+	local logger="$home_dir/.local/xdg_config_home/logger_a-Shell"
+	local log_file="$home_dir/.local/xdg_state_home/logs/a-Shell_logs/a-Shell_logs"
+	. "$logger" "Symlink manager" "INFO"
+	ln -s "$home_dir/.profile" "$HOME/Documents" && echo "[INFO] Symlinked .profile"
+	ln -s "$home_dir/.ssh" "$HOME/Documents" && echo "[INFO] Symlinked .ssh"
+	ln -s "$home_dir/.vim" "$HOME/Documents" && echo "[INFO] Symlinked .vim"
+	ln -s "$home_dir/.vimrc" "$HOME/Documents" && echo "[INFO] Symlinked .vimrc"
+}
+
+# printf "%s\t\t%s\n" "🟢🟡🔴" "SYMLINK DOTFILES"
 # Main Logic
-printf "%s\t\t%s\n" "🟢🟡🔴" "SYMLINK DOTFILES"
-symlink_dotfiles
+if [ -d "$home_dir_a_Shell" ]; then
+	. asci
+	syntax_hl
+	header
+	# symlink_aShell
+	echo "Symlinking a-Shell files"
+else
+	header
+	# symlink_ishfiles
+	echo "Symlinking ish files"
+fi
