@@ -7,3 +7,4 @@ journal.txt
 .local/xdg_data_home/databases/history*
 .local/xdg_data_home/history*
 .local/xdg_data_home/menus/
+.local/xdg_data_home/todo.txt

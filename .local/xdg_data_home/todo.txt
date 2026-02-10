@@ -27,3 +27,6 @@
 [ ] 26/2/5 02:51	finish vim filr go updates and setup for a-shell
 [ ] 26/2/6 13:40	Offline Documenttios: Sqlite3, Posix, linux, lua, Bash, git, manpages
 [ ] 26/2/7 13:54	Make sed file to parse history files
+[ ] 26/2/8 18:59	fix PATH variable
+[ ] 26/2/9 16:16	Made Shortcuts to view files in Downloads, can use vlc with a-shell scrupt to view videos!
+[ ] 26/2/9 16:17	Made Shortcuts to view files in Downloads, can use vlc with a-shell scrupt to view videos!
