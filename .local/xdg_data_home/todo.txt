@@ -30,3 +30,6 @@
 [ ] 26/2/8 18:59	fix PATH variable
 [ ] 26/2/9 16:16	Made Shortcuts to view files in Downloads, can use vlc with a-shell scrupt to view videos!
 [ ] 26/2/9 16:17	Made Shortcuts to view files in Downloads, can use vlc with a-shell scrupt to view videos!
+[ ] 26/2/10 13:44	Download more tutorials, Roman cypher; parsing log files; freecodecamp: git, sqlite3(@calebcurry),
+[ ] 26/2/11 00:37	set asci to profile
+[ ] 26/2/11 12:51	reader script not displaying list correctly

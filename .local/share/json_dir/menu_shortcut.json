@@ -1,0 +1,25 @@
+{
+  "linux": {
+    "awk": [],
+    "sed": [],
+    "jq": [],
+    "ssh": [],
+    "find": [],
+    "printf": []
+  },
+  "jq": [
+    {
+      "objects": [],
+      "maps": [],
+      "arrays": []
+    }
+  ],
+  "bash": [],
+  "sqlite3": [],
+  "git": [],
+  "lua": [],
+  "editors": {
+    "vim": [],
+    "ed": []
+  }
+}

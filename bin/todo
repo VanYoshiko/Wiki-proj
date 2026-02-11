@@ -5,7 +5,7 @@ clear
 logger="/mnt/sharedlocal/home/.local/xdg_config_home/logger_ish"
 TODO_FILE="/mnt/sharedlocal/home/.local/xdg_data_home/todo.txt"
 
-asci_colors="/mnt/sharedlocal/home/.local/xdg_state_home/terminal_graphics/.asci_colors"
+asci_colors="/mnt/sharedlocal/home/.local/share/themes/terminal_graphics/.asci_colors"
 date="$(date '+%y/%-m/%-d %H:%M')"
 source $logger "editing todo"
 source $asci_colors

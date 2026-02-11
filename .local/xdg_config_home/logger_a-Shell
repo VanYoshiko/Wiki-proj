@@ -9,20 +9,6 @@ log_file="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/share
 loggerd() {
 	local log_entry="[$timestamp] [$level] $script_name - $message"
 	printf "%s\n" "$log_entry" >> "$log_file"
-
-	case "$level" in
-		ERROR|FATAL)
-			echo  "❌ [$level] $message"
-			;;
-		WARN|WARNING)
-			echo "⚠️ [$level] $message"
-			;;
-		DEBUG)
-			echo "💡 [$level] $message"
-			;;
-		*)
-			echo "✅ [$level] $message"
-			;;
-	esac
 }
+
 loggerd

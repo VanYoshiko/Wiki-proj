@@ -2,6 +2,8 @@ export PATH="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sh
 export PS1='\[\e[1;30;47m\][\W]\[\e[0m\]\[\e[1;31m\]\$\[\e[0m\] '
 
 # Alias{{{
+alias INFO='echo -e "[INFO]$1"'
+alias ERROR='echo -e "[ERROR]$1"'
 alias jupyter='ib https://bug-free-broccoli-g456pwrg4rx53vxg7.github.dev/?editor=jupyter'
 alias vscode='ib https://bug-free-broccoli-g456pwrg4rx53vxg7.github.dev/'
 alias bk='bookmark'

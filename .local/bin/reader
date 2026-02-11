@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Source read bins
+case "$1" in
+-r)
+. view_pdfs
+;;
+-v)
+. view_manpages   
+;;
+-w)
+. view_video_vlc
+;;
+*)
+echo "Default view help"
+;;
+esac

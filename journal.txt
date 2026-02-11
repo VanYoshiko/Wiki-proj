@@ -35,3 +35,6 @@ usr_40.txt
 
 09:29
 ysap 
+26-02-10 07:22
+'awk''/<regex>/{print}'''      Search for strings 
+'awk''{if (~[n] /<regex>/) print}'''  <filename>  - Searches for a string in [n]column
