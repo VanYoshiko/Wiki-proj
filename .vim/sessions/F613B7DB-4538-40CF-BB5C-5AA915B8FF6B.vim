@@ -1,6 +1,6 @@
 " /private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home/.vim/sessions/F613B7DB-4538-40CF-BB5C-5AA915B8FF6B.vim:
 " Vim session script.
-" Created by session.vim 2.12 on 11 February 2026 at 11:45:38.
+" Created by session.vim 2.12 on 16 February 2026 at 08:34:57.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -28,18 +28,13 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +10 bin/todo
-badd +8 bin/todon
-badd +12 .local/xdg_config_home/symlink_aShell
-badd +0 .local/bin/reader
+badd +0 /private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/Docs/Q_A/subshells_bg.md
 argglobal
 %argdel
-$argadd bin/todo
-$argadd bin/todon
-edit .local/bin/reader
+$argadd /private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/Docs/Q_A/subshells_bg.md
+edit /private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/Docs/Q_A/subshells_bg.md
 argglobal
-if bufexists(fnamemodify(".local/bin/reader", ":p")) | buffer .local/bin/reader | else | edit .local/bin/reader | endif
-setlocal fdm=manual
+setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -47,15 +42,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 13 - ((12 * winheight(0) + 8) / 17)
+let s:l = 2 - ((1 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
-normal! 02|
-lcd /private/var/mobile/Library/Mobile\ Documents/com~apple~CloudDocs/sharedlocal/home
+keepjumps 2
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
 "   silent exe 'bwipe ' . s:wipebuf

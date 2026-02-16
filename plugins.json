@@ -1,0 +1,19 @@
+{
+  "plugin": [
+    {
+      "Name": "ale",
+      "Repository": [],
+      "Link": "https://github.com/dense-analysis/ale.git"
+    },
+    {
+      "Name": "vim-lsp",
+      "Repository": [],
+      "Link": "https://github.com/prabirshrestha/vim-lsp.git"
+    },
+    {
+      "Name": "vim-lsp-ale",
+      "Repository": [],
+      "Link": "https://github.com/rhysd/vim-lsp-ale.git"
+    }
+  ]
+}

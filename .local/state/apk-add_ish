@@ -1,0 +1,8 @@
+#!/bin/bash
+
+packages=(vim, Ale, vim_lsp, vim-lsp_Ale)
+
+for file in "$packages"; do
+	# pkg install $file
+	printf "Adding to world: %s\n" "$file"
+done

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# The C Programming Language (2nd Ed) - Kernighan & Ritchie
+# Not free but essential - check local library
+
+# Modern C (by Jens Gustedt)
+# curl -O https://hal.inria.fr/hal-02383654/document
+
+# Beej's Guide to C Programming
+# curl -O https://beej.us/guide/bgc/pdf/bgc_usl_c_1.pdf
+
+# Beej's Guide to Network Programming (socket programming)
+# curl -O https://beej.us/guide/bgnet/pdf/bgnet_usl_c_1.pdf
+# Algorithms - Jeff Erickson
+# curl -O http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf
+
+# Think Data Structures - Allen Downey
+# curl -O http://greenteapress.com/thinkdast/thinkdast.pdf
+
+# Open Data Structures (C++/Java/PO)
+# curl -O https://opendatastructures.org/ods-cpp.pdf
+# Pro Git (official, multiple formats)
+curl -O https://github.com/progit/progit2/releases/download/2.1.424/progit.pdf
+
+# Git Internals
+curl -O https://github.com/pluralsight/git-internals-pdf/raw/master/drafts/peepcode-git.pdf

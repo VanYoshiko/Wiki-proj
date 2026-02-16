@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# POSIX compliant
+# [TODO] - Test with <jq>
+
+for file in "vim Ale vim_lsp vim-lsp_Ale"; do
+printf "%s\n" "$(pkg install $file)" 
+done

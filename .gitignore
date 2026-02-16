@@ -1,4 +1,8 @@
 journal.txt
+*.vim
+myoasswords.csv
+*.tmp
+*.db
 .local/xdg_data_home/todo.txt 
 .vim/.netrwhist 
 /irok/

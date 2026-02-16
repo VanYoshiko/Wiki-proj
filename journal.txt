@@ -38,3 +38,9 @@ ysap
 26-02-10 07:22
 'awk''/<regex>/{print}'''      Search for strings 
 'awk''{if (~[n] /<regex>/) print}'''  <filename>  - Searches for a string in [n]column
+26-02-11 19:25
+
+{"WhatsApp":"https://www.group-ib.com/blog/whatsapp-forensic-artifacts/"}
+
+26-02-14 14:58
+Reading books of the Linux command line, bash course. Getting jq for storing data and metadata. Reading sqllite book

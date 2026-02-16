@@ -1,0 +1,29 @@
+{
+  "manager": {
+    "apk": {
+      "git": {
+        "version": null,
+        "documentations": null,
+        "release": null
+      },
+      "bash": {
+        "version": null,
+        "documentations": null,
+        "release": null
+      },
+      "sqlit3": null,
+      "sqlite": {
+        "version": null,
+        "documentations": null,
+        "release": null
+      }
+    },
+    "pkg": {
+      "vim": {
+        "version": null,
+        "documentations": null,
+        "release": null
+      }
+    }
+  }
+}
