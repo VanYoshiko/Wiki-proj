@@ -1,2 +1,3 @@
 [ ] 26/2/16 00:21	bash, javascript, sqlite, C
 [ ] 26/2/16 14:25	Make a seperate repo for markdown files and create them locally to push to same repo
+[ ] 26/2/17 04:57	To make markdown files for viewing data. json files not for viewing but for querying information. json files for menus in shortcuts apps as user input; or save metadata of topics. markdown files can be viewed locally or wiki style in github repository
