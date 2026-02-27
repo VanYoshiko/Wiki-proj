@@ -44,3 +44,14 @@ ysap
 
 26-02-14 14:58
 Reading books of the Linux command line, bash course. Getting jq for storing data and metadata. Reading sqllite book
+26-02-22 13:46
+Build file manager 
+13:57
+[upload files with php](https://youtu.be/JaRq73y5MJk)
+
+17:29
+[](https://chat.deepseek.com/a/chat/s/86437444-2ee8-44de-bd6e-5ff761f8e695)
+
+
+
+

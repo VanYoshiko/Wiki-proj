@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Usage: Create ssh-keys with permissions; Create symlinks from local to sandbox"
+
+home_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home"
+ssh_dir="$HOME/Documents/.ssh"
+pri_key="$ssh_dir/id_ed25519"
+pub_key="$ssh_dir/id_ed25519.pub"
+ssh_bak="$home_dir/.ssh"
+logger="$home_dir/a-Shell_logger"
+log_file="$home_dir/.local/xdg_state_home/logs/a-Shell_logs/a-Shell_logs"
+
+create_keygen() {
+		mkdir -p "$ssh_dir" && echo "[INFO] made directory ssh_dir" || echo "[INFO] Did not make ssh_dir"
+		mkdir -p "$ssh_bak" && echo "[INFO] made directory ssh_bak" || echo "[INFO] Did not make ssh_bak"
+		ssh-keygen -t ed25519 -f "$pri_key" -N "" -C "khorihenry@hotmail.com"  
+		echo "[INFO] 🔑 Add this key to https://github.com/settings/keys"
+			cat "$pub_key"
+}
+
+Add permissions to keys
+permissions() {
+chmod 600 "$pri_key" >/dev/null && echo "[INFO] Set permission for pri_key"
+chmod 644 "$pub_key" >/dev/null && echo "[INFO] Set permission for pub_key"
+chmod 700 "$ssh_dir" >/dev/null && echo "[INFO] Set permission for ssh_bak"
+}
+
+
+echo "$lINENO - [INFO] Main logic"
+create_keygen
+permissions

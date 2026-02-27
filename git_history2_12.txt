@@ -1,0 +1,94 @@
+vim .git/config ~/.ssh/config
+ls .git/config ~/.ssh/config
+vim ~/Documents/.ssh/config
+la ~xdg/.ssh
+la ~xdg/.ssh ~/Documents/.ssh
+la ~xdg/.ssh ~/Documents/
+la ~xdg/.ssh ~/Documents/.ssh
+ll ~xdg/.ssh ~/Documents/.ssh
+ll ~xdg/.ssh ~/Documents/.ssh/id_wiki_proj.pub
+cat ~xdg/.ssh/id_wiki_proj.pub  ~/Documents/.ssh/id_wiki_proj.pub
+ls .ssh/config irok/projects/wiki/.git/config
+ls .ssh/config irok/projects/wiki/.git/config .local/.ssh/config
+vim .ssh/config irok/projects/wiki/.git/config .local/.ssh/config
+sed '15,18p' ~/Documents/.ssh/config
+sed -n '15,18p' ~/Documents/.ssh/config
+ssh -T git@github.com-wiki
+ssh -T git@github.com-wiki
+ssh -T git@github.com-wiki
+ssh -T git@github.com-wiki
+ssh -T git@github.com
+. .local/state/sshkey_a-Shell
+source .local/state/sshkey_a-Shell
+source .local/state/sshkey_a-Shell
+cat .local/state/sshkey_a-Shell
+vim .local/state/sshkey_a-Shell
+./.local/state/sshkey_a-Shell
+vim .local/state/sshkey_a-Shell
+ssh -T git@github.com
+cat ~/Documents/.ssh
+ls ~/Documents/.ssh
+history | grep "ssh" > git_history2_12.txt
+vim .git/config ~/.ssh/config
+ls .git/config ~/.ssh/config
+ls .git/config ~/
+la .git/config ~/
+git push --set-upstream origin m aster
+git push --set-upstream origin m aster
+history | grep "git remote"
+history | grep "git remove"
+git remote remove origin
+git remote add origin git@github.com-wiki:VanYoshiko/Wiki-proj.git
+git remote remove origin
+git remote add origin git@github.com-wiki:VanYoshiko/Wiki-proj.git
+git push
+git push origin
+git push origin main
+git push origin develop
+ls .ssh/config irok/projects/wiki/.git/config
+ls .ssh/config irok/projects/wiki/.git/config .local/.ssh/config
+vim .ssh/config irok/projects/wiki/.git/config .local/.ssh/config
+git push
+git push origign
+git push origin
+git remote remove origin
+git remote add origin git@github.com-wiki:VanYoshiko/Wiki-proj.git
+git pull
+ssh -T git@github.com-wiki
+vim -S ~xdg/.vim/sessions/git_usr_configs.vim
+ssh -T git@github.com-wiki
+vim -S ~xdg/.vim/sessions/git_usr_configs.vim
+ssh -T git@github.com-wiki
+git push
+git branch list
+git branch --list
+git push origin master
+vim -S ~xdg/.vim/sessions/git_usr_configs.vim
+vim -S ~xdg/.vim/sessions/git_usr_configs.vim
+vim -S ~xdg/.vim/sessions/git_usr_configs.vim
+ssh -T git@github.com-wiki
+ssh -T git@github.com
+ssh -T git@github.com
+vim .local/state/setup_git_a-Shell
+touch irok/tutorials/git
+vim irok/tutorials/git
+vim irok/tutorials/git
+chmod +x irok/tutorials/git_commands.sh
+./irok/tutorials/git_commands.sh
+vim irok/tutorials/git
+./irok/tutorials/git_commands.sh
+vim irok/tutorials/git
+./irok/tutorials/git_commands.sh
+vim irok/tutorials/git
+history | grep "ssh" > git_history2_12.txt
+history | grep "git" >> git_history2_12.txt
+git status
+git commit -m "Updated files. symlink script for both apps"
+git checkout master
+git rm .vim/.netrwhist
+cat >> .gitignore #<
+cat >> .gitignore <<EOT
+git add .
+git commit -m 'how to remove a commit"
+git commit -m 'how to remove a commit'
+git checkout master

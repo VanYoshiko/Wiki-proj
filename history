@@ -1,0 +1,12 @@
+2352 git restore --staged .vim/*
+2353 git status
+2354 git commit -m "Updated files. symlink script for both apps"
+2355 git checkout master
+2356 git rm .vim/.netrwhist
+2360 cat >> .gitignore #<
+2361 cat >> .gitignore <<EOT
+2365 git add .
+2366 git commit -m 'how to remove a commit"
+2367 git commit -m 'how to remove a commit'
+2369 git checkout master
+2371 git merge develop

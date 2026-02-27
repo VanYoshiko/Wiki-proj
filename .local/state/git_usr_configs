@@ -21,6 +21,5 @@ printf "[core]\n\tbare = false\n\trepositoryformatversion = 0\n\t filemode = tru
 }
 
 # Main:
-git init .
 create_user_configs
 create_global_configs

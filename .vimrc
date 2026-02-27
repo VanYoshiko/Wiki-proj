@@ -49,8 +49,8 @@ autocmd FileType * vnoremap <buffer> <localleader>" :<c-u>s/\%V.*\%V/"&"/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>[ :<c-u>s/\%V.*\%V/[&]/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>{ :<c-u>s/\%V.*\%V/{&}/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>( :<c-u>s/\%V.*\%V/(&)/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>' :<c-u>s/\%V'\(.*\)\%V'/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>" :<c-u>s/\%V"\(.*\)\%V"/\1/g<CR>
+autocmd FileType * vnoremap <buffer> <localleader>.' :<c-u>s/\%V'\(.*\)\%V'/\1/g<CR>
+autocmd FileType * vnoremap <buffer> <localleader>." :<c-u>s/\%V"\(.*\)\%V"/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.] :<c-u>s/\%V\[\(.*\)\%V\]/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.} :<c-u>s/\%V{\(.*\)\%V}/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.) :<c-u>s/\%V(\(.*\)\%V)/\1/g<CR>

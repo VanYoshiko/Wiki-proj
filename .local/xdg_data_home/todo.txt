@@ -1,3 +1,12 @@
 [ ] 26/2/16 00:21	bash, javascript, sqlite, C
 [ ] 26/2/16 14:25	Make a seperate repo for markdown files and create them locally to push to same repo
 [ ] 26/2/17 04:57	To make markdown files for viewing data. json files not for viewing but for querying information. json files for menus in shortcuts apps as user input; or save metadata of topics. markdown files can be viewed locally or wiki style in github repository
+[ ] 26/2/23 04:45	fix qoutes wrapper in .vimrc
+[ ] 26/2/23 13:19	Continue reading TLCL then vim as the two tools being used
+[ ] 26/2/23 13:23	Markdown files and files that shortcut are dependent on can be symlinked to ~shortcuts
+[ ] 26/2/24 14:13	echo -e hello \n world
+[ ] 26/2/24 14:14	echo -e hello \ 
+world
+[ ] 26/2/24 14:14	echo -e hello \ 
+world again
+[ ] 26/2/24 14:17	echo -e hello \n world

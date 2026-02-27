@@ -1,4 +1,6 @@
 set nocompatible
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
 let maplocalleader="\\"
 let mapleader=" "
 set path+=**
@@ -20,7 +22,6 @@ syntax on
 syntax enable
 colorscheme murphy
 set showcmd
-
 set laststatus=2
 set statusline=%(%2*%m%w%k%q\%*\%)%(%6*%<%f%*%)\%=%a%-4y%(\ %5*\ %n\ %*%)\%(%4*\ %l%*/%3*%L\ %*%1*%P%*%)
 hi User6 ctermfg=15 ctermbg=236
@@ -48,15 +49,13 @@ autocmd FileType * vnoremap <buffer> <localleader>" :<c-u>s/\%V.*\%V/"&"/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>[ :<c-u>s/\%V.*\%V/[&]/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>{ :<c-u>s/\%V.*\%V/{&}/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>( :<c-u>s/\%V.*\%V/(&)/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>' :<c-u>s/\%V'\(.*\)\%V'/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>" :<c-u>s/\%V"\(.*\)\%V"/\1/g<CR>
+autocmd FileType * vnoremap <buffer> <localleader>.' :<c-u>s/\%V'\(.*\)\%V'/\1/g<CR>
+autocmd FileType * vnoremap <buffer> <localleader>." :<c-u>s/\%V"\(.*\)\%V"/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.] :<c-u>s/\%V\[\(.*\)\%V\]/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.} :<c-u>s/\%V{\(.*\)\%V}/\1/g<CR>
 autocmd FileType * vnoremap <buffer> <localleader>.) :<c-u>s/\%V(\(.*\)\%V)/\1/g<CR>
 augroup END
 
-
-# localleader maps
 nnoremap <Localleader>v :version<CR>
 nnoremap <Localleader>u :undolist<CR>
 nnoremap <Localleader>a :args<CR>
@@ -72,8 +71,6 @@ nnoremap <Localleader>% <C-G>
 nnoremap <Localleader>_ <C-w>c
 nnoremap <Localleader>+ :w!<CR>
 nnoremap <Localleader>- :q!<CR>
-
-# Scrolling
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap £ <C-d>zz
@@ -81,14 +78,11 @@ nnoremap ¥ <C-u>zz
 inoremap jk <ESC>
 vnoremap jk <esc>
 
-# leader maps
-nnoremap <leader>c :c
-nnoremap <leader>b :b
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>. :e .<CR>
+nnoremap <leader>Z :%s/<C-R><C-W>/<C-R>0/g<CR>
 
 
 
-command! -nargs=1 Help !lynx https://vimhelp.org/<args>.txt.html
