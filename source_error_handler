@@ -1,5 +1,10 @@
-sed 's/^<\w.*\w>.*\n//g'
-%s/^[^aA-zZ]$//g
-%s/^[aA-zZ]$//
-%s/^[<]\w*\w[>].\+$//
-%s/^[aA-zZ][aA-zZ]$//
+#!/bin/sh
+
+view_cleanup_dir() {
+find . -type f -maxdepth 1 -exec sed 's/^<\w.*\w>.*\n//g' {} \;
+find . -type f -maxdepth 1 -exec sed 's/^[^aA-zZ]$//g' {} \;
+find . -type f -maxdepth 1 -exec sed 's/^[aA-zZ]$//' {} \;
+find . -type f -maxdepth 1 -exec sed 's/^[<]\w*\w[>].\+$//' {} \;
+find . -type f -maxdepth 1 -exec sed 's/^[aA-zZ][aA-zZ]$//' {} \;
+}
+view_cleanup_dir

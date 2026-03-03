@@ -1,16 +1,20 @@
 #!/bin/sh
 
 clear 
-logger="/mnt/sharedlocal/home/.local/state/logger_ish"
-TODO_FILE="/mnt/sharedlocal/home/.local/xdg_data_home/todo.txt"
-asci_colors="/mnt/sharedlocal/home/.local/state/themes/terminal_graphics/.asci_colors"
-date="$(date '+%y/%-m/%-d %H:%M')"
-source $logger "editing todo"
-source $asci_colors
-echo -e "${YELLOW}======================================${RESET}"
+home_dir="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home"
+echo "This is home:--> $home_dir <--"
+logger="$home_dir/.local/usr/state/logger_a-Shell"
+TODO_FILE="$home_dir/.local/xdg_data_home/todo.txt"
+
+asci_colors="$home_dir/.local/usr/state/themes/terminal_graphics/.asci_colors"
+date=date
+# '+%y/%-m/%-d %H:%M'
+# . $logger "editing todo"
+. "$asci_colors"
+printf "${YELLOW}======================================${RESET}"
 center 'TODO'
 
-function show_help {
+show_help() {
 	echo "usage: todo [command] [task]"
 	echo "Commands:"
 	echo "	add [task] 		add task"
@@ -21,14 +25,14 @@ function show_help {
 
 add_task() {
 	if [ -z "$1" ]; then
-		echo -e "${RED}Task cannot be empty${RESET}"
+		printf "${RED}Task cannot be empty${RESET}"
 		exit 1
 	fi
 	printf "[ ] %s\t$1\n" "$date" >> $TODO_FILE
 	echo "Added task: $date $1"
 }
 
-function list_tasks {
+list_tasks() {
 	if [ -s "$TODO_FILE" ]; then
 		echo "$?"
 		echo "Your TODO list: $(grep "^\[\s\]" .local/xdg_data_home/todo.txt | wc -l)"	
@@ -41,6 +45,7 @@ function list_tasks {
 remove_task() {
 	if [ -z "$1" ]; then
 		echo "${RED}Error: Task to be removed cannot be empty${RESET}"
+		
 		exit 1 
 	fi
 	if [ ! -f "$TODO_FILE" ]; then
@@ -52,7 +57,7 @@ remove_task() {
 }
 
 # Mark task as completed!
-function mark_task() {
+mark_task() {
 	if [ -z "$1" ]; then
 		echo "Error: Task to be removed cannot be empty"
 		exit 1 
@@ -84,5 +89,4 @@ case "$1" in
 		;;
 esac
 
-echo -e "${YELLOW}======================================${RESET}"
-clear 
+printf "${YELLOW}======================================${RESET}"

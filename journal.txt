@@ -1,32 +1,4 @@
-
-26-02-07 07:31
-Test with date and time
-26-02-07 07:31
-Still date and time
-07:32
-Okay just time 
-13:07
-'declare -A'    To make an associative array in bash.
-'{arr[@]}'  -       To iterate thru an array 
 20:19
-'cal -y'            Display year
-26-02-08 05:21
-'$#'               Displays the number of arguments to a script.
-05:24
-'$0'         Print the name of script being used.
-05:32
-'$?'              Check to see if script has run successfully. 
-05:47
-'$*'           passes each arguments a single argument.
-'$@'         Passes all arguments as a single argument 
-06:06
-'$$'           PID for current shell
-06:11
-'echo  ${arr[@]}'    Displays entire arrays 
-'echo ${!arr[@]}'    Displays indices of arrays 
-21:50
-'<command>&'    Puts the following command in the background.
-'wait'               Waits for background process to finish.
 26-02-09 09:23
 Menus for terminal :
  Use function with case statement and print statements for usr input!

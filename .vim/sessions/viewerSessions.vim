@@ -22,6 +22,7 @@ cmap <D-o> <D-o>
 imap <D-o> <D-o>
 cmap <D-n> <D-n>
 imap <D-n> <D-n>
+nnoremap  Z :%s//0/g
 nnoremap  . :e .
 nnoremap  bn :bnext
 nnoremap  bp :bprevious
@@ -30,6 +31,7 @@ nnoremap N Nzz
 nnoremap \- :q!
 nnoremap \+ :w!
 nnoremap \_ c
+nnoremap \% 
 nnoremap \c :changes
 nnoremap \q q/
 nnoremap \m :messages
@@ -114,20 +116,29 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +0 .local/share/a-Shell/vlc_viewer
+badd +1 irok/projects/wiki/Topics/vim.md
+badd +1 irok/projects/wiki/Topics/sqlite.md
+badd +1 irok/projects/wiki/Topics/matplotlib.md
+badd +1 irok/projects/wiki/Topics/bash.md
+badd +1 irok/projects/wiki/Topics/jq.md
+badd +1 irok/projects/wiki/Topics/git.md
+badd +1 irok/projects/wiki/Topics/linux.md
 argglobal
 %argdel
 $argadd .local/share/a-Shell/vlc_viewer
-edit .local/share/a-Shell/vlc_viewer
+edit irok/projects/wiki/Topics/linux.md
 argglobal
+balt irok/projects/wiki/Topics/vim.md
 vnoremap <buffer> \.) :s/\%V(\(.*\)\%V)/\1/g
 vnoremap <buffer> \.} :s/\%V{\(.*\)\%V}/\1/g
 vnoremap <buffer> \.] :s/\%V\[\(.*\)\%V\]/\1/g
+vnoremap <buffer> \." :s/\%V"\(.*\)\%V"/\1/g
+vnoremap <buffer> \.' :s/\%V'\(.*\)\%V'/\1/g
 vnoremap <buffer> \( :s/\%V.*\%V/(&)/g
 vnoremap <buffer> \{ :s/\%V.*\%V/{&}/g
 vnoremap <buffer> \[ :s/\%V.*\%V/[&]/g
-vnoremap <buffer> \" :s/\%V"\(.*\)\%V"/\1/g
-vnoremap <buffer> \' :s/\%V'\(.*\)\%V'/\1/g
+vnoremap <buffer> \" :s/\%V.*\%V/"&"/g
+vnoremap <buffer> \' :s/\%V.*\%V/'&'/g
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -144,8 +155,8 @@ setlocal cinoptions=
 setlocal cinscopedecls=public,protected,private
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#%s
+setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal commentstring=<!--%s-->
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -162,8 +173,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'sh'
-setlocal filetype=sh
+if &filetype != 'markdown'
+setlocal filetype=markdown
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -177,16 +188,16 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+\\|^\\[^\\ze[^\\]]\\+\\]:
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -197,14 +208,14 @@ setlocal nolist
 setlocal listchars=
 setlocal makeencoding=
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=htmlcomplete#CompleteTags
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -216,12 +227,12 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=3
+setlocal shiftwidth=2
 setlocal noshortname
 setlocal showbreak=
 setlocal sidescrolloff=-1
 setlocal signcolumn=auto
-setlocal nosmartindent
+setlocal smartindent
 setlocal softtabstop=0
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -232,10 +243,10 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'sh'
-setlocal syntax=sh
+if &syntax != 'markdown'
+setlocal syntax=markdown
 endif
-setlocal tabstop=3
+setlocal tabstop=2
 setlocal tagcase=
 setlocal tagfunc=
 setlocal tags=
@@ -252,11 +263,11 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 28 - ((6 * winheight(0) + 8) / 17)
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 28
+keepjumps 1
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0

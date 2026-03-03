@@ -23,66 +23,69 @@ syntax enable
 colorscheme murphy
 set showcmd
 set laststatus=2
-set statusline=%(%2*%m%w%k%q\%*\%)%(%6*%<%f%*%)\%=%a%-4y%(\ %5*\ %n\ %*%)\%(%4*\ %l%*/%3*%L\ %*%1*%P%*%)
-hi User6 ctermfg=15 ctermbg=236
-hi User3 ctermfg=82 ctermbg=236
+set statusline=%(%1*%m%w%k%q%*%)%(%2*%<%t%*%)%=%(%3*%c/%L-%P-[%n]%*%)
+# set statusline=%(%2*%m%r%h%w%k%q%y\%*\%)%(%6*%<%f%*%)\%=%a%-4y%(\ %5*\ %n\ %*%)\%(%4*\ %l%*/%3*%L\ %*%1*%P%*%)
+hi User1 ctermfg=226 ctermbg=0
 hi User2 ctermfg=202 ctermbg=0
-hi User5 ctermbg=243 ctermfg=1
-hi User1 ctermfg=15 ctermbg=236
-hi StatusLine ctermfg=15 ctermbg=236 cterm=bold
-hi StatusLineNC ctermfg=15 ctermbg=238 cterm=bold
+hi User3 ctermfg=82 ctermbg=0
+hi StatusLine ctermfg=15 ctermbg=0 cterm=bold
+hi StatusLineNC ctermfg=15 ctermbg=236 cterm=bold
 
 augroup foldmethod
 	autocmd!
 	autocmd FileType * setlocal foldmethod=marker
-	augroup END
-
-augroup wraptext
-autocmd!
-autocmd FileType * setlocal foldmethod=marker
 augroup END
 
 augroup wraptext
-autocmd!
-autocmd FileType * vnoremap <buffer> <localleader>' :<c-u>s/\%V.*\%V/'&'/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>" :<c-u>s/\%V.*\%V/"&"/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>[ :<c-u>s/\%V.*\%V/[&]/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>{ :<c-u>s/\%V.*\%V/{&}/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>( :<c-u>s/\%V.*\%V/(&)/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>.' :<c-u>s/\%V'\(.*\)\%V'/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>." :<c-u>s/\%V"\(.*\)\%V"/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>.] :<c-u>s/\%V\[\(.*\)\%V\]/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>.} :<c-u>s/\%V{\(.*\)\%V}/\1/g<CR>
-autocmd FileType * vnoremap <buffer> <localleader>.) :<c-u>s/\%V(\(.*\)\%V)/\1/g<CR>
+	autocmd!
+	autocmd FileType * setlocal foldmethod=marker
+augroup END
+
+augroup wraptext
+	autocmd!
+	autocmd FileType * vnoremap <buffer> <leader>' :<c-u>s/\%V.*\%V/'&'/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>" :<c-u>s/\%V.*\%V/"&"/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>[ :<c-u>s/\%V.*\%V/[&]/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>{ :<c-u>s/\%V.*\%V/{&}/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>( :<c-u>s/\%V.*\%V/(&)/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>.' :<c-u>s/\%V'\(.*\)\%V'/\1/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>." :<c-u>s/\%V"\(.*\)\%V"/\1/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>.] :<c-u>s/\%V\[\(.*\)\%V\]/\1/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>.} :<c-u>s/\%V{\(.*\)\%V}/\1/<CR>
+	autocmd FileType * vnoremap <buffer> <leader>.) :<c-u>s/\%V(\(.*\)\%V)/\1/g<CR>
 augroup END
 
 nnoremap <Localleader>v :version<CR>
-nnoremap <Localleader>u :undolist<CR>
-nnoremap <Localleader>a :args<CR>
-nnoremap <Localleader>r :registers<CR>
-nnoremap <Localleader>j :jumps<CR>
-nnoremap <Localleader>k :marks<CR>
-nnoremap <Localleader>b :buffers<CR>
-nnoremap <Localleader>h :history<CR>
-nnoremap <Localleader>m :messages<CR>
-nnoremap <Localleader>q q/
-nnoremap <Localleader>c :changes<CR>
-nnoremap <Localleader>% <C-G>
-nnoremap <Localleader>_ <C-w>c
-nnoremap <Localleader>+ :w!<CR>
+nnoremap <Localleader>% :!%
 nnoremap <Localleader>- :q!<CR>
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap £ <C-d>zz
-nnoremap ¥ <C-u>zz
-inoremap jk <ESC>
-vnoremap jk <esc>
 
+nnoremap <leader>1 :undolist<CR>
+nnoremap <leader>2 :args<CR>
+nnoremap <leader>3 :registers<CR>
+nnoremap <leader>4 :jumps<CR>
+nnoremap <leader>5 :marks<CR>
+nnoremap <leader>6 :buffers<CR>
+nnoremap <leader>7 :history<CR>
+nnoremap <leader>8 :messages<CR>
+nnoremap <leader>q q/
+nnoremap <leader>9 :changes<CR>
+nnoremap <leader>b :b
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>. :e .<CR>
-nnoremap <leader>Z :%s/<C-R><C-W>/<C-R>0/g<CR>
+nnoremap <leader>C :%s/<C-R><C-W>/<C-R>0/g<CR>
 
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap ZC <C-w>c
+nnoremap ZW :w!<CR>
+nnoremap £ <C-d>zz
+nnoremap ¥ <C-u>zz
+nnoremap € <C-^>
+nnoremap [ <C-i>
+nnoremap ] <C-o>
+inoremap jk <ESC>
+vnoremap jk <esc>
 
 
