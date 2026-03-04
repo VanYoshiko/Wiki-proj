@@ -1,9 +1,22 @@
 export PATH="/private/var/mobile/Library/Mobile Documents/com~apple~CloudDocs/sharedlocal/home/.local/bin:$PATH"
 export PS1='\[\e[1;30;47m\][\W]\[\e[0m\]\[\e[1;31m\]\$\[\e[0m\] '
 
+# ===== COLOR CODES =====
+# Basic colors
+BLACK='\033[0;30m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+
 # Alias{{{
-alias INFO='echo -e "[INFO]$1"'
-alias ERROR='echo -e "[ERROR]$1"'
+alias INFO='echo "${YELLOW}[INFO]${RS}"'
+alias DEBUG='echo "${BLUE}[DEBUG]${RS}"'
+alias ERROR='echo "${RED}[ERROR]${RS}"'
+alias SUCCESS='echo "${GREEN}[SUCCESS]${RS}"'
 alias jupyter='ib https://bug-free-broccoli-g456pwrg4rx53vxg7.github.dev/?editor=jupyter'
 alias vscode='ib https://bug-free-broccoli-g456pwrg4rx53vxg7.github.dev/'
 alias bk='bookmark'

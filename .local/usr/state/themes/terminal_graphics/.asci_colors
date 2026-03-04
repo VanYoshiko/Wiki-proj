@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Posix requires '\033'. '\e' is and 'echo -e' is not POSIX standards.
+
 # ===== COLOR CODES =====
 # Basic colors
 BLACK='\033[0;30m'
@@ -39,10 +41,12 @@ UNDERLINE='\033[4m'
 BLINK='\033[5m'
 REVERSE='\033[7m'
 HIDDEN='\033[8m'
-RESET='\e[0m'
+RESET='\033[0m'
 
+INFO=printf "${BLUE}[INFO]$1 ${RESET}"
+ERROR=printf "${RED}[ERROR]${RESET}"
 header() {
-	printf "🔴🟡🟢\t %s\n" "$(echo $$)"
+	printf "🚥\t %s\n" "$(echo $$)"
 }
 
 center() {

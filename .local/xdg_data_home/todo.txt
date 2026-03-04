@@ -11,3 +11,15 @@ world
 world again
 [ ] 26/2/24 14:17	echo -e hello \n world
 [ ] date	a-shell first note
+[ ] date	Finish todo list with a csv version
+[ ] date	Finish todo list with a csv version
+[ ] date	TEST FOR ASHELL COLORS
+[ ] date	echo successful if green
+[ ] date	echo successful if green
+[ ] date	Testing colors; INFO
+[ ] date	Testing colors; info
+[ ] date	Testing colors; info
+[ ] date	adding tasks exho com
+[ ] date	adding tasks exho com
+[ ] date	adding tasks exho com
+[ ] date	adding tasks exho com
